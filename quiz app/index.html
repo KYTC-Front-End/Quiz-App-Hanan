@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html lang="en"></html>
+    <title> Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="Header">
+        <!--  NAVBAR  -->
+        <section class="container">
+            <section class="leader-link">
+                <button class="leaderText">Highscores</button>
+            </section>
+            <section class="title-block">
+                <h1 id="navTitle">Quiz Game</h1>
+            </section>
+            <section class="nav-item">
+                <h2>Time:<span id="timer"></span></h2>
+            </section>
+        </section>
+<!-- WELCOME GAME CONTAINER  -->
+        <section class="main">
+            <section class="welcome-container">
+                <h1 class="instruction-text">Welcome to my small Quiz Game built using HTML, CSS and vanilla JavaScript.
+                </h1>
+
+                <p>You will be presented with a series of questions and multiple choice answers to select from. Answer
+                    the questions as best you can. Your score will be calculated at the end of the game or when the
+                    timer runs out. When the game ends you can add your name and score to the leader board. This is a
+                    timed test, can you beat the high score?</p>
+
+                <br>
+
+                <h4>Click on the 'Play Game'  to start</h4>
+
+                <section class="start-button">
+                    <button id="start">
+                        <h2>Play Game</h2>
+                    </button>
+                </section>
+            </section>
+
+            <!-- QUESTIONS CONTAINER  -->
+            <section class="questions-container">
+                <h1 id="question-title"><span id="Q">Q:</span> Temp Question</h1>
+                <ul id="question-choices">
+                </ul>
+            </section>
+
+            <!-- USER SCORE AND FORM CONTAINER -->
+            <section class="form-container">
+                <h1>Your Score: <span id="user-score">0</span></h1>
+                <form>
+                    <label class="label" for="username">Enter Name:</label>
+                    <input id="username" type="text">
+                    <button id="userSubmit" type="submit">
+                        <h2>Submit</h2>
+                    </button>
+                </form>
+            </section>
+
+            <!-- END OF MAIN SECTION      -->
+        </section>
+
+        <!-- HIGH SCORE MODAL  -->
+        <section class="modal-container hide">
+            <section class="modal-content">
+                <section class="modal-header">
+                    <section class="close">
+                        &times;
+                    </section>
+                    <h1 class="modal-header-title"><span class="accent">Leader</span> Board</h1>
+                </section>
+                <section class="modal-body">
+                    <ul class="user-scores">
+                        <!-- DYNAMICALLY CREATED <LI> ITEMS -->
+                    </ul>
+                </section>
+                <section class="modal-footer">
+                    <h2 class="modal-footer-msg">Can you beat the high score?</h2>
+                    <section class="highscore-btns">
+                        <button class="modal-btn exit">
+                            <h2>Close</h2>
+                        </button>
+                        <button class="modal-btn clear">
+                            <h2>Clear Scores</h2>
+                        </button>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <!-- FOOTER SECTION -->
+        <section class="footer">
+            <section class="footer-container">
+                <h3>&copy;2023 By Hanan-iyad</h3>
+            </section>
+        </section>
+
+    </section>
+
+    <script src="questions.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
